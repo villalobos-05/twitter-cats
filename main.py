@@ -1,9 +1,7 @@
 import tweepy
 from typing import Union
 from io import BytesIO
-from fastapi import FastAPI
 import os
-app = FastAPI()
 
 # Credentials
 BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
