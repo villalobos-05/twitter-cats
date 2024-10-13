@@ -3,9 +3,9 @@ name: Run Scheduled Script
 on:
   push:
       branches:
-        - main  # Or the default branch
+        - main
   schedule:
-    - cron: '0 */3 * * *'  # Runs daily at 2:30 PM UTC
+    - cron: '0 */3 * * *'
 
 jobs:
   run-script:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: '3.9.6'
+          python-version: '3.13.0'
 
       - name: Install dependencies
         run: |
