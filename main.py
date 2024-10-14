@@ -2,6 +2,9 @@ import tweepy
 from typing import Union
 from io import BytesIO
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Credentials
 BEARER_TOKEN = os.getenv("TWITTER_BEARER_TOKEN")
@@ -9,6 +12,8 @@ API_KEY = os.getenv("TWITTER_API_KEY")
 API_SECRET_KEY = os.getenv("TWITTER_API_SECRET_KEY")
 ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN")
 ACCESS_TOKEN_SECRET = os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
+
+print(BEARER_TOKEN)
 
 # Authentication for API v1.1
 auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
