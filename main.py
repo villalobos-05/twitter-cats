@@ -13,8 +13,6 @@ API_SECRET_KEY = os.getenv("TWITTER_API_SECRET_KEY")
 ACCESS_TOKEN = os.getenv("TWITTER_ACCESS_TOKEN")
 ACCESS_TOKEN_SECRET = os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
 
-print(BEARER_TOKEN)
-
 # Authentication for API v1.1
 auth = tweepy.OAuth1UserHandler(API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api_v1 = tweepy.API(auth)
